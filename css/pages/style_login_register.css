@@ -1,0 +1,119 @@
+/* ======== ESTILOS BASE DE PÁGINA ======== */
+.page {
+  background: var(--background);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: system-ui, sans-serif;
+  color: var(--text);
+}
+
+.page--login,
+.page--register {
+  background: var(--background);
+}
+
+/* ======== BLOQUE LOGIN / REGISTER ======== */
+.login {
+  width: 100%;
+  max-width: 400px;
+  padding: 1rem;
+}
+
+.login__card {
+  background: var(--surface);
+  padding: 2rem;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+
+.login__title {
+  margin-bottom: 1rem;
+  font-size: 1.6rem;
+  font-weight: bold;
+  text-align: center;
+}
+
+/* ======== MENSAJES ======== */
+.login__msg {
+  padding: 0.75rem 1rem;
+  border-radius: var(--radius);
+  margin-bottom: 1rem;
+  font-size: 0.9rem;
+}
+
+.login__msg--error {
+  background: var(--danger-light);
+  color: var(--danger);
+  border: 1px solid var(--danger);
+}
+
+.login__msg--success {
+  background: var(--success-light);
+  color: var(--success);
+  border: 1px solid var(--success);
+}
+
+/* ======== FORMULARIO ======== */
+.login__form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.login__label {
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.login__input {
+  padding: 0.75rem;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  font-size: 1rem;
+  transition: border-color var(--transition), box-shadow var(--transition);
+}
+
+.login__input:focus {
+  border-color: var(--primary);
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.2);
+}
+
+/* ======== BOTÓN ======== */
+.login__btn {
+  background: var(--primary);
+  color: white;
+  padding: 0.75rem;
+  border: none;
+  border-radius: var(--radius);
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background var(--transition);
+}
+
+.login__btn:hover {
+  background: var(--primary-dark);
+}
+
+/* ======== ENLACES ======== */
+.login__register {
+  margin-top: 1rem;
+  font-size: 0.85rem;
+  text-align: center;
+  color: var(--muted);
+}
+
+.login__link {
+  color: var(--primary);
+  text-decoration: none;
+  font-weight: 600;
+  transition: color var(--transition);
+}
+
+.login__link:hover {
+  color: var(--primary-dark);
+  text-decoration: underline;
+}

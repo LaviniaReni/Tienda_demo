@@ -1,0 +1,40 @@
+:root {
+  /* 🎨 Colores principales */
+  --primary: #2563eb;       /* Azul principal */
+  --primary-light: #3b82f6; /* Azul claro */
+  --primary-dark: #1e40af;  /* Azul oscuro */
+
+  /* ✅ Estados */
+  --success: #166534;        /* Verde */
+  --success-light: #dcfce7;  /* Verde claro (fondo success) */
+  --danger: #dc2626;         /* Rojo */
+  --danger-light: #fee2e2;   /* Rojo claro (fondo error) */
+  --warning: #f59e0b;        /* Naranja/ámbar */
+
+  /* 📝 Texto */
+  --text: #111827;           /* Texto principal */
+  --muted: #6c6f75;          /* Texto secundario / deshabilitado */
+  --text-invert: #ffffff;    /* Texto en modo invertido (sobre fondos oscuros) */
+  --muted-invert: #b3b3b3;   /* Texto atenuado en modo invertido */
+  --primary-contrast: #ffffff; /* Texto sobre botones primarios */
+
+
+  /* 🖼️ Fondos y superficies */
+  --background: #f7f7fb;    /* Fondo general */
+  --surface: #ffffff;       /* Superficie / tarjetas */
+  --disabled-bg: #f3f4f6; /* Fondo gris claro para botones deshabilitados */
+
+
+  /* ➕ Extras */
+  --border: #e5e5e5;        /* Bordes */
+  --card: #f9fafb;          /* Fondo de cards */
+  --accent: #e63946;        /* Color de acento (rojo coral) */
+  --radius: 0.5rem;         /* radios de borde */
+  --shadow: 0 2px 6px rgba(0,0,0,0.08); /* sombra sutil */
+  --transition: 0.3s ease;  /* transiciones por defecto */
+
+  /* 🌐 Colores de marca para redes sociales */
+  --brand-telegram: #229ED9;
+  --brand-whatsapp: #25D366;
+  --brand-mail: #EA4335; /* Gmail rojo */
+}

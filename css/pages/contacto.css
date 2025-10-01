@@ -1,0 +1,143 @@
+/* ===============================
+   Contacto - Página de contacto
+   Basado en tokens.css
+   =============================== */
+:root {
+  --shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  --radius: 16px;
+  --transition: all 0.3s ease;
+}
+
+/* ====== Estructura principal ====== */
+.contact {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 40px 20px;
+  min-height: calc(100vh - 120px); /* resta header + footer */
+  background: linear-gradient(135deg, var(--primary-light), var(--primary-dark));
+  font-family: 'Segoe UI', Roboto, sans-serif;
+  color: var(--text);
+}
+
+/* Contenedor central */
+.contact__container {
+  flex: 1;
+  max-width: 600px;
+  background: var(--surface);
+  padding: 30px;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  animation: fadeIn 0.8s ease;
+}
+
+/* Título */
+.contact__title {
+  text-align: center;
+  color: var(--primary);
+  margin-bottom: 20px;
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+/* ====== Formulario ====== */
+.contact__form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.contact__input,
+.contact__textarea {
+  padding: 14px;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  font-size: 15px;
+  outline: none;
+  transition: var(--transition);
+  background: var(--surface);
+}
+
+.contact__input:focus,
+.contact__textarea:focus {
+  border-color: var(--primary);
+  box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.25); /* sombra azul suave */
+}
+
+.contact__textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+/* Botón */
+.contact__button {
+  padding: 14px;
+  background: var(--primary);
+  color: var(--surface);
+  border: none;
+  border-radius: 10px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.contact__button:hover {
+  background: var(--primary-dark);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+}
+
+/* ====== Mensajes ====== */
+.contact__message {
+  text-align: center;
+  font-weight: 700;
+  padding: 12px;
+  border-radius: 8px;
+  margin-bottom: 15px;
+  animation: fadeIn 0.45s ease;
+  line-height: 1.2;
+}
+
+/* Modificadores de estado */
+.contact__message--success {
+  background: var(--success);
+  color: #fff;
+}
+
+.contact__message--error {
+  background: var(--danger);
+  color: #fff;
+}
+
+.contact__message--warn {
+  background: var(--warning);
+  color: #111;
+}
+
+/* ====== Animación ====== */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(12px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* ====== Responsive ====== */
+@media (max-width: 480px) {
+  .contact {
+    padding: 20px;
+  }
+
+  .contact__container {
+    padding: 20px;
+  }
+
+  .contact__title {
+    font-size: 1.6rem;
+  }
+
+  .contact__input,
+  .contact__textarea,
+  .contact__button {
+    font-size: 14px;
+  }
+}
