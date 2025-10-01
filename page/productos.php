@@ -35,9 +35,10 @@ if ($paginaActual > $totalPaginas && $totalPaginas > 0) {
     exit();
 }
 
-// Consulta de productos con límite
+// Consulta de productos con orden recomendado
 $sql = "SELECT id, nombre, descripcion, precio, stock, imagen 
         FROM productos 
+        ORDER BY id DESC
         LIMIT $productosPorPagina OFFSET $offset";
 $res = $conn->query($sql);
 
@@ -49,6 +50,7 @@ include __DIR__ . "/../includes/head.php";
 include __DIR__ . "/../includes/header.php";
 ?>
 <link rel="stylesheet" href="/css/components/grid_productos.css">
+
 <div class="productos">
   <div class="productos__card">
     <h1 class="productos__title">Productos Disponibles</h1>
@@ -74,13 +76,13 @@ include __DIR__ . "/../includes/header.php";
                   <p><strong>$<?= number_format($row['precio'], 2); ?></strong></p>
                   <p>Stock: <?= (int)$row['stock']; ?></p>
 
-                  <!-- Botón agregar -->
-                  <form method="post" action="<?= $base_url; ?>agregar_carrito.php">
-                      <input type="hidden" name="producto_id" value="<?= (int)$row['id']; ?>">
-                      <button type="submit" class="btn-agregar" aria-label="Agregar <?= htmlspecialchars($row['nombre']); ?> al carrito">
-                          Agregar al carrito
-                      </button>
-                  </form>
+                  <!-- Botón AJAX agregar -->
+                  <button type="button" 
+                          class="btn-agregar add-to-cart" 
+                          data-id="<?= (int)$row['id']; ?>"
+                          aria-label="Agregar <?= htmlspecialchars($row['nombre']); ?> al carrito">
+                      🛒 Añadir al carrito
+                  </button>
               </article>
           <?php endwhile; ?>
       <?php else: ?>

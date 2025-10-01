@@ -1,0 +1,36 @@
+/* === Contenedor de toasts === */
+.toast-container {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: .5rem;
+  z-index: 2000;
+}
+
+/* === Estilo general del toast === */
+.toast {
+  background: #333;
+  color: #fff;
+  padding: .75rem 1rem;
+  border-radius: .5rem;
+  font-size: .9rem;
+  opacity: 0;
+  transform: translateX(100%);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  min-width: 220px;
+  max-width: 300px;
+  box-shadow: 0 4px 10px rgba(0,0,0,.2);
+}
+
+/* Estado visible */
+.toast.show {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Variantes según tipo */
+.toast.success { background: #28a745; } /* Verde */
+.toast.error { background: #dc3545; }   /* Rojo */
+.toast.info { background: #007bff; }    /* Azul */
