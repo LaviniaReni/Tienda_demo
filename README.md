@@ -1,6 +1,3 @@
-Muy buena idea — te armo un **README.md completo** para tu repositorio `Tienda_demo`. Podés copiarlo y pegarlo como archivo `README.md` en la raíz del proyecto.
-
-Aquí va:
 
 ```markdown
 # Tienda_demo
