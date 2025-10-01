@@ -72,7 +72,8 @@ if (!defined("BASE_URL")) {
     <title><?php echo isset($pageTitle) ? $pageTitle . " | LoginApp" : "LoginApp"; ?></title>
 
     <!-- Estilos principales -->
-    <link rel="stylesheet" href="<?= BASE_URL; ?>css/main.css">   
+    <link rel="stylesheet" href="<?= BASE_URL; ?>css/main.css">
+    <link rel="stylesheet" href="<?= BASE_URL; ?>css/layout/header.css">
      <!-- Scripts -->
     <script src="<?= BASE_URL; ?>js/header.js" defer></script>
 </head>
